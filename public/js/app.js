@@ -37053,184 +37053,271 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("main", { staticClass: "main" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-lg-12" }, [
-            _c("h1", [_vm._v("CEDULA 0 - CURRICULUM VITAE RESUMIDO - 2019-1")]),
+  return _c("main", { staticClass: "main" }, [
+    _c("div", { staticClass: "container-fluid" }, [
+      _c("h1", [_vm._v("CEDULA 0 - CURRICULUM VITAE RESUMIDO")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c("form", { staticClass: "form-horizontal" }, [
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "text-input" }
+              },
+              [_vm._v("Número de control*")]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "form-group" }, [
-                _c("form", [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-sm-12" }, [
-                      _c("div", { staticClass: "form-group row" }, [
-                        _c(
-                          "label",
-                          {
-                            staticClass: "col-form-label",
-                            attrs: { for: "inputnoprofesor" }
-                          },
-                          [_vm._v("NO. DE PROFESOR")]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-2" }, [
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "text",
-                              id: "inputnoprofesor",
-                              placeholder: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-sm-12" }, [
-                      _c("div", { staticClass: "form-group row" }, [
-                        _c(
-                          "label",
-                          {
-                            staticClass: "col-form-label",
-                            attrs: { for: "inputapellidopaterno" }
-                          },
-                          [_vm._v("APELLIDO PATERNO")]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-2" }, [
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "text",
-                              id: "inputapellidopaterno",
-                              placeholder: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          {
-                            staticClass: "col-form-label",
-                            attrs: { for: "inputapellidomaterno" }
-                          },
-                          [_vm._v("APELLIDO MATERNO")]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-2" }, [
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "text",
-                              id: "inputapellidomaterno",
-                              placeholder: ""
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "label",
-                          {
-                            staticClass: "col-form-label",
-                            attrs: { for: "inputapellidomaterno" }
-                          },
-                          [_vm._v("NOMBRE(S)")]
-                        ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-sm-3" }, [
-                          _c("input", {
-                            staticClass: "form-control",
-                            attrs: {
-                              type: "text",
-                              id: "inputapellidomaterno",
-                              placeholder: ""
-                            }
-                          })
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-12" }, [
-                    _c("div", { staticClass: "form-group row" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-form-label",
-                          attrs: { for: "inputapellidopaterno" }
-                        },
-                        [_vm._v("EDAD")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-2" }, [
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            id: "inputapellidopaterno",
-                            placeholder: ""
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-form-label",
-                          attrs: { for: "inputapellidomaterno" }
-                        },
-                        [_vm._v("FECHA DE NACIMIENTO")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-3" }, [
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "date",
-                            value: "2011-08-19",
-                            id: "example-date-input"
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "label",
-                        {
-                          staticClass: "col-form-label",
-                          attrs: { for: "inputapellidomaterno" }
-                        },
-                        [_vm._v("PUESTO")]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm-3" }, [
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            id: "inputapellidomaterno",
-                            placeholder: ""
-                          }
-                        })
-                      ])
-                    ])
-                  ])
-                ])
-              ])
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.numero_control,
+                    expression: "numero_control"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Número de control" },
+                domProps: { value: _vm.numero_control },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.numero_control = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "text-input" }
+              },
+              [_vm._v("Apellido Paterno*")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.apellido_paterno,
+                    expression: "apellido_paterno"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  placeholder: "Ingrese Apellido Paterno"
+                },
+                domProps: { value: _vm.apellido_paterno },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.apellido_paterno = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "text-input" }
+              },
+              [_vm._v("Apellido Materno*")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.apellido_materno,
+                    expression: "apellido_materno"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  placeholder: "Ingrese Apellido Materno"
+                },
+                domProps: { value: _vm.apellido_materno },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.apellido_materno = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "text-input" }
+              },
+              [_vm._v("Nombres*")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.nombre,
+                    expression: "nombre"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese Nombre(s)" },
+                domProps: { value: _vm.nombre },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.nombre = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "email" }
+              },
+              [_vm._v("email*")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "email", placeholder: "Ingrese email" },
+                domProps: { value: _vm.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "text-input" }
+              },
+              [_vm._v("Fecha de nacimiento*")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.fecha_nacimiento,
+                    expression: "fecha_nacimiento"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  placeholder: "Ingrese Fecha de Nacimiento"
+                },
+                domProps: { value: _vm.fecha_nacimiento },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.fecha_nacimiento = $event.target.value
+                  }
+                }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group row" }, [
+            _c(
+              "label",
+              {
+                staticClass: "col-md-3 form-control-label",
+                attrs: { for: "text-input" }
+              },
+              [_vm._v("Escolaridad*")]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-9" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.escolaridad,
+                    expression: "escolaridad"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text", placeholder: "Ingrese Escolaridad" },
+                domProps: { value: _vm.escolaridad },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.escolaridad = $event.target.value
+                  }
+                }
+              })
             ])
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
