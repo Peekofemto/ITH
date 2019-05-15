@@ -1790,6 +1790,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37424,30 +37425,39 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
-        _c("div", { staticClass: "panel panel-default" }, [
-          _c("div", { staticClass: "panel-heading" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "panel-body" }, [
-            _c("legend", [_vm._v("Subir Archivos")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "form-group" }, [
-              _c("label"),
+  return _c("main", { staticClass: "main" }, [
+    _c("div", { staticClass: "container-fluid" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+          _c("div", { staticClass: "card" }, [
+            _c("div", { staticClass: "card-body" }, [
+              _c("h5", { staticClass: "card-title" }, [
+                _vm._v("Subir Archivos")
+              ]),
               _vm._v(" "),
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { id: "upload-file", type: "file", multiple: "" },
-                on: { change: _vm.fieldChange }
-              })
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", on: { click: _vm.uploadFile } },
-              [_vm._v("Submit")]
-            )
+              _c("h6", { staticClass: "card-subtitle mb-2 text-danger" }, [
+                _vm._v("Limite de subida de 15 MB ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-group row" }, [
+                _c("label"),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { id: "upload-file", type: "file", multiple: "" },
+                  on: { change: _vm.fieldChange }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  on: { click: _vm.uploadFile }
+                },
+                [_vm._v("Subir")]
+              )
+            ])
           ])
         ])
       ])
@@ -49826,7 +49836,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\ITH\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/ITH/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })
