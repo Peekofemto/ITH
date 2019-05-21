@@ -51,7 +51,7 @@ export default {
                 this.form.append('archivos[]',this.attachments[i]);
             }
             const config = { headers: { 'Content-Type': 'multipart/form-data' } };
-            let carpeta = 2;
+            let carpeta = 1;
             let me = this;
             document.getElementById('upload-file').value=[];
             axios.post('/upload/'+ carpeta,this.form,config,{

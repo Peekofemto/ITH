@@ -44,9 +44,12 @@ export default {
             for(let i=0;i<selectedFiles.length;i++){
                 this.attachments.push(selectedFiles[i]);
             }
+            this.selectedFiles = [];
+            console.log(this.selectedFiles);
             console.log(this.attachments);
         },
         uploadFile(){
+
             for(let i=0; i<this.attachments.length;i++){
                 this.form.append('archivos[]',this.attachments[i]);
             }
@@ -57,7 +60,8 @@ export default {
             axios.post('/upload/'+ carpeta,this.form,config,{
                 
             }).then(response=>{
-
+                me.attachments = [];
+                me.selectedFiles = [];
 
             }).catch(response=>{
  

@@ -21,10 +21,17 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::post('/upload',function(Request $request){
+Route::post('/upload/{carpeta}',function($carpeta,Request $request){
+    //error_log(json_decode($request));
     $uploadedFiles=$request->archivos;
     foreach ($uploadedFiles as $file){
-        $file->store('dummy');
+        $file->store('Carpetas/'.$carpeta);
     }
     return response(['status'=>'success'],200);
+});
+
+Route::get('/pdf', function(){
+    $pdf = PDF::loadView('plantilla/pdf');
+    return $pdf->download('Cedula0.pdf');
+
 });

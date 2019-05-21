@@ -22,6 +22,12 @@ window.Vue = require('vue');
 
 Vue.component('cedula0', require('./components/Cedula0.vue').default);
 Vue.component('fileupload', require('./components/FileUpload.vue').default);
+Vue.component('carpeta1', require('./components/Carpeta1.vue').default);
+Vue.component('carpeta2', require('./components/Carpeta2.vue').default);
+Vue.component('carpeta3', require('./components/Carpeta3.vue').default);
+Vue.component('carpeta4', require('./components/Carpeta4.vue').default);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -40,22 +40,14 @@
                     </li>
                     <li @click="menu=6" class="nav-item">
                         <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-file"></i> Intrumentos de evaluación utilizados</a>
-                        <ul class="nav-dropdown-items">
-                            <li @click="menu=7" class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-file"></i>Intrumento de evaluación...</a>
-                            </li>
-                            <li @click="menu=8" class="nav-item">
-                                    <a class="nav-link" href="#"><i class="fa fa-file"></i> Llenado de rubricas</a>
-                            </li>
-                        </ul>
                     </li>
-                    <li @click="menu=9" class="nav-item">
+                    <li @click="menu=7" class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-file"></i>Portafolio de evidencias</a>
                     </li>
-                    <li @click="menu=10" class="nav-item">
+                    <li @click="menu=8" class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-file"></i>Reporte final del semestre</a>
                     </li>
-                    <li @click="menu=11" class="nav-item">
+                    <li @click="menu=9" class="nav-item">
                             <a class="nav-link" href="#"><i class="fa fa-file"></i>Reporte individual</a>
                     </li>
                 </ul>
@@ -63,15 +55,15 @@
             <li class="nav-item nav-dropdown">
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-folder"></i> Carpeta 4</a>
                 <ul class="nav-dropdown-items">
-                    <li @click="menu=12" class="nav-item">
+                    <li @click="menu=10" class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-file"></i>Documento Practicas de laboratorio</a>
                     </li>
                 </ul>
             </li>
-            <li @click="menu=13" class="nav-item">
+            <li @click="menu=11" class="nav-item">
                 <a class="nav-link" href="#"><i class="icon-book-open"></i> Ayuda <span class="badge badge-danger">PDF</span></a>
             </li>
-            <li @click="menu=14" class="nav-item">
+            <li @click="menu=12" class="nav-item">
                 <a class="nav-link" href="#"><i class="icon-info"></i> Acerca de...<span class="badge badge-info">IT</span></a>
             </li>
         </ul>
