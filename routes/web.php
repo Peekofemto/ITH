@@ -12,9 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('inicio_usuario');
+    return view('welcome');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/login/personalizado',[
+    'uses' => 'Auth\LoginController@login',
+    'as' => 'login.personalizado'
+]);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/administrador', function () {
+        return view('home');
+    })->name('administrador');
+
+    Route::get('/usuario', function () {
+        return view('inicio_usuario');
+    })->name('usuario');
+});
