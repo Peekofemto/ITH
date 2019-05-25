@@ -2083,6 +2083,106 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Cedula0.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Cedula0.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      no_maestro: '',
+      apellido_pat: '',
+      apellido_mat: '',
+      nombres: '',
+      condicion: 0
+    };
+  },
+  methods: {
+    registrarCedula: function registrarCedula() {
+      var me = this; //esta ruta hace referencia a la funcion store del CedulaController
+
+      axios.post('/cedula/registrar', {
+        'no_maestro': this.no_maestro,
+        'apellido_pat': this.apellido_pat,
+        'apellido_mat': this.apellido_mat,
+        'nombres': this.nombres
+      }).then(function (response) {
+        me.abilitarPdf();
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    },
+    abilitarPdf: function abilitarPdf() {
+      this.condicion = 1;
+    },
+    cargarPdf: function cargarPdf() {
+      // var url = '/cedula/listarPdf?no_maestro=' + no_maestro;
+      // axios.get(url).then(function (response) {
+      //     // handle success
+      //     console.log(response);
+      // })
+      // .catch(function (error) {
+      //     // handle error
+      //     console.log(error);
+      // });
+      window.open('http://localhost:8000/cedula/listarPdf', '_blank');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FileUpload.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FileUpload.vue?vue&type=script&lang=js& ***!
@@ -37720,7 +37820,7 @@ var render = function() {
                 staticClass: "col-md-3 form-control-label",
                 attrs: { for: "text-input" }
               },
-              [_vm._v("Número de control*")]
+              [_vm._v("Número de maestro*")]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-9" }, [
@@ -37729,19 +37829,19 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.numero_control,
-                    expression: "numero_control"
+                    value: _vm.no_maestro,
+                    expression: "no_maestro"
                   }
                 ],
                 staticClass: "form-control",
-                attrs: { type: "text", placeholder: "Número de control" },
-                domProps: { value: _vm.numero_control },
+                attrs: { type: "text", placeholder: "Número de maestro" },
+                domProps: { value: _vm.no_maestro },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.numero_control = $event.target.value
+                    _vm.no_maestro = $event.target.value
                   }
                 }
               })
@@ -37764,8 +37864,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.apellido_paterno,
-                    expression: "apellido_paterno"
+                    value: _vm.apellido_pat,
+                    expression: "apellido_pat"
                   }
                 ],
                 staticClass: "form-control",
@@ -37773,13 +37873,13 @@ var render = function() {
                   type: "text",
                   placeholder: "Ingrese Apellido Paterno"
                 },
-                domProps: { value: _vm.apellido_paterno },
+                domProps: { value: _vm.apellido_pat },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.apellido_paterno = $event.target.value
+                    _vm.apellido_pat = $event.target.value
                   }
                 }
               })
@@ -37802,8 +37902,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.apellido_materno,
-                    expression: "apellido_materno"
+                    value: _vm.apellido_mat,
+                    expression: "apellido_mat"
                   }
                 ],
                 staticClass: "form-control",
@@ -37811,13 +37911,13 @@ var render = function() {
                   type: "text",
                   placeholder: "Ingrese Apellido Materno"
                 },
-                domProps: { value: _vm.apellido_materno },
+                domProps: { value: _vm.apellido_mat },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.apellido_materno = $event.target.value
+                    _vm.apellido_mat = $event.target.value
                   }
                 }
               })
@@ -37840,130 +37940,56 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.nombre,
-                    expression: "nombre"
+                    value: _vm.nombres,
+                    expression: "nombres"
                   }
                 ],
                 staticClass: "form-control",
                 attrs: { type: "text", placeholder: "Ingrese Nombre(s)" },
-                domProps: { value: _vm.nombre },
+                domProps: { value: _vm.nombres },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.nombre = $event.target.value
+                    _vm.nombres = $event.target.value
                   }
                 }
               })
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-group row" }, [
-            _c(
-              "label",
-              {
-                staticClass: "col-md-3 form-control-label",
-                attrs: { for: "email" }
-              },
-              [_vm._v("email*")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-9" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.email,
-                    expression: "email"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "email", placeholder: "Ingrese email" },
-                domProps: { value: _vm.email },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+          _c("div", [
+            _c("div", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.registrarCedula()
                     }
-                    _vm.email = $event.target.value
                   }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group row" }, [
-            _c(
-              "label",
-              {
-                staticClass: "col-md-3 form-control-label",
-                attrs: { for: "text-input" }
-              },
-              [_vm._v("Fecha de nacimiento*")]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-md-9" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.fecha_nacimiento,
-                    expression: "fecha_nacimiento"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "text",
-                  placeholder: "Ingrese Fecha de Nacimiento"
                 },
-                domProps: { value: _vm.fecha_nacimiento },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.fecha_nacimiento = $event.target.value
-                  }
-                }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group row" }, [
-            _c(
-              "label",
-              {
-                staticClass: "col-md-3 form-control-label",
-                attrs: { for: "text-input" }
-              },
-              [_vm._v("Escolaridad*")]
-            ),
+                [_vm._v("Guardar")]
+              )
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-9" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.escolaridad,
-                    expression: "escolaridad"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { type: "text", placeholder: "Ingrese Escolaridad" },
-                domProps: { value: _vm.escolaridad },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+            _c("div", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-warning",
+                  attrs: { type: "button", disabled: _vm.condicion == 0 },
+                  on: {
+                    click: function($event) {
+                      return _vm.cargarPdf()
                     }
-                    _vm.escolaridad = $event.target.value
                   }
-                }
-              })
+                },
+                [_vm._v("Pdf")]
+              )
             ])
           ])
         ])
@@ -50565,15 +50591,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Cedula0_vue_vue_type_template_id_2b00456d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cedula0.vue?vue&type=template&id=2b00456d& */ "./resources/js/components/Cedula0.vue?vue&type=template&id=2b00456d&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Cedula0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cedula0.vue?vue&type=script&lang=js& */ "./resources/js/components/Cedula0.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Cedula0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Cedula0_vue_vue_type_template_id_2b00456d___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Cedula0_vue_vue_type_template_id_2b00456d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -50587,6 +50615,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Cedula0.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Cedula0.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Cedula0.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cedula0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Cedula0.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Cedula0.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cedula0_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

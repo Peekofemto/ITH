@@ -799,47 +799,66 @@ EXCEL -->
   cuartillas, no se aceptarán documentos adicionales.</font></td>
   <td class=xl7312114 width=89 style='border-left:none;width:67pt'>Número de
   profesor (de 001 a 999)</td>
-  <td class=xl7412114>&nbsp;</td>
+  <td class=xl7412114>{{$cedula->no_maestro}}</td>
  </tr>
  <tr height=8 style='mso-height-source:userset;height:6.0pt'>
   <td colspan=5 height=8 class=xl6512114 style='height:6.0pt'></td>
  </tr>
+
+
+
+ <!--Apartado info basica -->
  <tr height=13 style='mso-height-source:userset;height:9.75pt'>
   <td colspan=2 height=13 class=xl8512114 style='border-right:.5pt solid black;
-  height:9.75pt'>Apellido paterno</td>
-  <td class=xl7512114 style='border-left:none'>Apellido materno</td>
+  height:9.75pt'>Apellido Paterno</td>
+  <td class=xl7512114 style='border-left:none'>Apellido Materno</td>
   <td colspan=2 class=xl8512114 style='border-right:.5pt solid black;
   border-left:none'>Nombre(s)</td>
  </tr>
+ 
  <tr height=20 style='height:15.0pt'>
   <td colspan=2 height=20 class=xl8212114 style='border-right:.5pt solid black;
-  height:15.0pt'>&nbsp;</td>
-  <td class=xl7612114 style='border-left:none'>&nbsp;</td>
+  height:15.0pt'>{{$cedula->apellido_pat}}</td>
+  <td class=xl7612114 style='border-left:none'>{{$cedula->apellido_mat}}</td>
   <td colspan=2 class=xl8212114 style='border-right:.5pt solid black;
-  border-left:none'>&nbsp;</td>
+  border-left:none'>{{$cedula->nombres}}</td>
  </tr>
+
+
+
  <tr height=10 style='mso-height-source:userset;height:8.1pt'>
   <td colspan=5 height=10 class=xl6512114 style='height:8.1pt'></td>
  </tr>
+
+
+ <!--Apartado Edad, Fecha de nac, Puesto -->
  <tr height=13 style='mso-height-source:userset;height:9.75pt'>
   <td height=13 class=xl7512114 style='height:9.75pt'>Edad</td>
   <td class=xl7512114 style='border-left:none'>Fecha de nacimiento (dd/mm/aaaa)</td>
   <td colspan=3 class=xl8512114 style='border-right:.5pt solid black;
   border-left:none'>Puesto en la institución</td>
  </tr>
+
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl7712114 style='height:15.0pt'>&nbsp;</td>
-  <td class=xl7812114 style='border-left:none'>&nbsp;</td>
+  <td height=20 class=xl7712114 style='height:15.0pt'>22</td>
+  <td class=xl7812114 style='border-left:none'>27/10/1996</td>
   <td colspan=3 class=xl8212114 style='border-right:.5pt solid black;
-  border-left:none'>&nbsp;</td>
+  border-left:none'>Alumno</td>
  </tr>
+
+
+
  <tr height=10 style='mso-height-source:userset;height:8.1pt'>
   <td colspan=5 height=10 class=xl6512114 style='height:8.1pt'></td>
  </tr>
+
+
+ <!--Formacion academica -->
  <tr height=20 style='height:15.0pt'>
   <td colspan=5 height=20 class=xl6912114 style='height:15.0pt'>Formación
   académica</td>
  </tr>
+
  <tr height=13 style='mso-height-source:userset;height:9.75pt'>
   <td height=13 class=xl7112114 style='height:9.75pt'>Nivel</td>
   <td class=xl7112114 style='border-left:none'>Nombre (incluir especialidad)</td>
@@ -847,6 +866,7 @@ EXCEL -->
   <td class=xl7112114 style='border-left:none'>Año de obtención</td>
   <td class=xl7112114 style='border-left:none'>Cédula Profesional</td>
  </tr>
+
  <tr height=20 style='height:15.0pt'>
   <td height=20 class=xl7212114 style='height:15.0pt;border-top:none'>L</td>
   <td class=xl6712114 style='border-top:none;border-left:none'>&nbsp;</td>

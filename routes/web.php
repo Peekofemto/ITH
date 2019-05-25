@@ -12,13 +12,18 @@
 */
 use Illuminate\Http\Request;
 
+
+
 Route::get('/', function () {
     return view('contenido/contenido');
 });
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/cedula/registrar', 'CedulaController@store');
+Route::get('/cedula/listarPdf', 'CedulaController@listarPdf')->name('cedula0_pdf');
+
+
 
 
 Route::post('/upload/{carpeta}',function($carpeta,Request $request){
@@ -30,8 +35,3 @@ Route::post('/upload/{carpeta}',function($carpeta,Request $request){
     return response(['status'=>'success'],200);
 });
 
-Route::get('/pdf', function(){
-    $pdf = PDF::loadView('plantilla/pdf');
-    return $pdf->download('Cedula0.pdf');
-
-});
