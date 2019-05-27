@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/login/personalizado',[
@@ -24,12 +25,18 @@ Route::post('/login/personalizado',[
     'as' => 'login.personalizado'
 ]);
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/administrador', function () {
-        return view('home');
-    })->name('administrador');
 
+Route::group(['middleware' => 'auth'], function () {
+    
+    Route::get('/administrador', 'AdministradorController@index')->name('administrador');
+
+    Route::post('/administrador', 'AdministradorController@carpetas')->name('administrador');
+/*
+    Route::get('/administrador', function () {
+        return view('administrador');
+    })->name('administrador');
+*/
     Route::get('/usuario', function () {
-        return view('inicio_usuario');
+        return view('usuario');
     })->name('usuario');
 });

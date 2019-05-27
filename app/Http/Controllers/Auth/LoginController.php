@@ -45,6 +45,7 @@ class LoginController extends Controller
          'password' =>$request->password]))
         {
           $user =  User:: where('email',$request->email)->first();
+
           if($user->es_admin())
           {
             return redirect()->route('administrador');
