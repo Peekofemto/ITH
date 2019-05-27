@@ -2150,8 +2150,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     registrarCedula: function registrarCedula() {
-      var me = this; //esta ruta hace referencia a la funcion store del CedulaController
-
+      var me = this;
       axios.post('/cedula/registrar', {
         'no_maestro': this.no_maestro,
         'apellido_pat': this.apellido_pat,
